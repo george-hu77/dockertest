@@ -10,4 +10,12 @@ services:
         NODE_ENV: production
     environment:
       - NODE_ENV=production
+      - MONGO_USER=george
+      - MONGO_PASSWORD=password
+      - SESSION_SECRET=secret
+
     command: node index.js
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=george
+      - MONGO_INITDB_ROOT_PASSWORD=password 
